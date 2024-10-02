@@ -1,0 +1,52 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+    color: var(--vscode-foreground);
+    background-color: var(--vscode-editor-background);
+    margin: 0;
+    padding: 16px;
+}
+
+h1, h2 {
+    color: var(--vscode-editor-foreground);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid var(--vscode-editorGroup-border);
+}
+
+span[contenteditable] {
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 8px;
+    border: none;
+    background-color: var(--vscode-editor-background);
+    color: var(--vscode-foreground);
+}
+
+span[contenteditable]:focus {
+    outline: none;
+    border-bottom: 1px solid var(--vscode-editor-hoverHighlight);
+}
+
+span {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+a {
+    color: var(--vscode-errorForeground);
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--vscode-editorWarning-foreground);
+}

@@ -1,0 +1,69 @@
+{
+  "name": "simple-task-tracker",
+  "displayName": "Simple task tracker",
+  "description": "Allows you to easily manage your daily tasks and create alarms for them.",
+  "version": "0.0.1",
+
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:extension.startTimer",
+    "onCommand:extension.showTaskManager",
+    "onCommand:extension.stopTimer",
+    "onCommand:extension.clearTimers",
+    "onCommand:extension.addTask",
+    "onCommand:extension.toggleTask"
+  ],
+  "main": "extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.startTimer",
+        "title": "Start Timer"
+      },
+      {
+        "command": "extension.showTaskManager",
+        "title": "Show Task Manager"
+      },
+      {
+        "command": "extension.stopTimer",
+        "title": "Stop Timer"
+      },
+      {
+        "command": "extension.clearTimers",
+        "title": "Clear All Timers"
+      },
+      {
+        "command": "extension.addTask",
+        "title": "Add Task"
+      },
+      {
+        "command": "extension.toggleTask",
+        "title": "Toggle Task Completion"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "tasks",
+          "title": "View Tasks",
+          "icon": "media/logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "tasks": [
+        {
+          "type": "webview",
+          "id": "tasks",
+          "name": "Timers & Tasks"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.0"
+  }
+}
